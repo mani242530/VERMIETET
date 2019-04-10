@@ -44,7 +44,7 @@ Run `npm build` to build the project. The build artifacts will be stored in the 
 
 ## Running unit tests
 
-Run `npm  test` to execute the unit tests using jasmine and karma.
+Run `npm  run test` to execute the unit tests using jasmine and karma.
 
 ## Running end-to-end tests
 

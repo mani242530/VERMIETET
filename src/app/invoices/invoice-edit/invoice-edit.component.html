@@ -1,0 +1,74 @@
+<div *ngIf="invoice">
+  <h2>{{title}}</h2>
+
+  <div>
+    <div class="row">
+      <div class="col-sm-9">
+        <form #frminvoice="ngForm" id="frmInvoice" novalidate (ngSubmit)="onSaveInvoice()" novalidate>
+          <div class="row form-group">
+            <label class="text-right control-label col-sm-3" for="txtDate">Date:</label>
+            <div class="col-sm-5">
+              <input id="txtDate"
+                     type="date"
+                     class="form-control"
+                     [(ngModel)]="invoice.date"
+                     title="Date"
+                     placeholder="Enter a date ..." [ngModelOptions]="{standalone: true}"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <label class="text-right control-label col-sm-3" for="txtSubject">Subject:</label>
+            <div class="col-sm-5">
+                <input id="txtSubject"
+                type="text"
+                class="form-control"
+                [(ngModel)]="invoice.subject"
+                title="Subject"
+                placeholder="Enter a subject ..." [ngModelOptions]="{standalone: true}"
+         />
+            </div>
+          </div>
+          <div class="row form-group">
+            <label class="text-right control-label col-sm-3" for="txtAmount">Amount:</label>
+            <div class="col-sm-5">
+              <input id="txtAmount"
+                     type="text"
+                     class="form-control"
+                     [(ngModel)]="invoice.amount"
+                     title="Amount"
+                     placeholder="Enter a amount" [ngModelOptions]="{standalone: true}"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <label class="text-right control-label col-sm-3" for="txtDate">IBAN:</label>
+            <div class="col-sm-5">
+              <input id="txtIBAN"
+                     type="text"
+                     class="form-control"
+                     [(ngModel)]="invoice.IBAN"
+                     title="IBAN"
+                     placeholder="Enter a IBAN" [ngModelOptions]="{standalone: true}"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save invoice</button>
+            <div class="btn-group">
+              <button type="button" (click)="onBack()" class="btn btn-secondary btn-sm">
+                <i class="fa fa-arrow-left"></i> Back
+              </button>
+              <button type="button" (click)="reset()" class="btn btn-warning btn-sm">
+                <i class="fa fa-undo"></i> Reset
+              </button>
+              <button type="button" (click)="delete(invoice.id)" class="btn btn-danger btn-sm">
+                <i class="fa fa-times"></i> Delete
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

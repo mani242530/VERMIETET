@@ -1,0 +1,32 @@
+<div *ngIf="invoice | async; let invoice;">
+  <h2>{{title}}</h2>
+
+  <div class="row text-center">
+    <div class="col-sm-9">
+      <div class="row">
+        <label class="col-sm-2">Date:</label>
+        <div class="col-sm-9">{{invoice.date}}</div>
+      </div>
+      <div class="row">
+        <label class="col-sm-2">Subject: </label>
+        <div class="col-sm-9">{{invoice.subject}}</div>
+      </div>
+      <div class="row">
+        <label class="col-sm-2">Amount: </label>
+        <div class="col-sm-9">{{invoice.amount}}</div>
+      </div>
+      <div class="row">
+        <label class="col-sm-2">IBAN: </label>
+        <div class="col-sm-9">{{invoice.IABN}}</div>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary btn-sm" routerLink="/invoices">
+          <i class="fa fa-arrow-left"></i> Back
+        </button>
+        <button type="button" (click)="delete(invoice.id)" class="btn btn-danger btn-sm">
+          <i class="fa fa-times"></i> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="col-sm-6 align-bottom">
+    <button class="btn btn-primary pull-right" routerLink="/invoices/create">Create invoice</button>
+  </div>
+</div>
+<table class="table table-striped" style="text-align: left">
+  <thead>
+  <tr>    
+    <th>Id</th>
+    <th>Date</th>
+    <th>Subject</th>
+    <th>Amount</th>
+    <th>IBAN</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let invoice of invoices | async">
+    <td>{{invoice.id}}</td>
+    <td>{{invoice.date}}</td>
+    <td>{{invoice.subject}}</td>
+    <td>{{invoice.amount}}</td>
+    <td>{{invoice.IBAN}}</td>
+    <td>
+      <div class="btn-group">
+        <button routerLink="/invoices/detail/{{invoice.id}}" class="btn btn-secondary btn-sm">
+          <i class="fa fa-search"></i>
+        </button>
+        <button routerLink="/invoices/edit/{{invoice.id}}" class="btn btn-info btn-sm">
+          <i class="fa fa-pencil-square-o"></i>
+        </button>
+        <button (click)="delete(invoice.id)" class="btn btn-danger btn-sm">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

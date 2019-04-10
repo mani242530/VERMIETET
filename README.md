@@ -1,6 +1,6 @@
 # VERMIETET
 
-This application display a list of invoices using http services (through **HttpClient**) and **@ngrx/store and @ngrx/effects** libraries grouping information by modules. The **ngrx** is a Redux inspired library created for Angular to manage the state changes.
+This application display a list of invoices will create, update and delete using http services (through **HttpClient**) and **@ngrx/store and @ngrx/effects** libraries grouping information by modules. The **ngrx** is a Redux inspired library created for Angular to manage the state changes.
 
 # Getting Started
 To start using the application follow the next steps:

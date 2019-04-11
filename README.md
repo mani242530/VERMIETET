@@ -8,7 +8,7 @@ To start using the application follow the next steps:
 ## Get the Code
 ```
 git clone https://github.com/mani242530/VERMIETET.git
-cd MYHAMMER
+cd VERMIETET
 npm i
 or
 npm install
@@ -34,6 +34,9 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 1. When application is loaded, It will display list of invoices.
 2. Click on `view icon` to navigate to invoice detail page.
 3. In invoice detail page, It will display description of invoice.
+4. Click on `create invoice` button on top, It will display create invoice page.
+4. Click on `edit icon`, to navigate edit invoice page.
+4. Click on `delete icon`, to delete selected invoice.
 
 ```
 # Useful Commands
